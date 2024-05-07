@@ -53,7 +53,7 @@ const TtsCreatJobCard = ({}: Props) => {
   };
 
   return (
-    <Card>
+    <Card className="w-full max-w-md">
       <CardHeader>
         <CardTitle>Text to speech</CardTitle>
         <CardDescription>
