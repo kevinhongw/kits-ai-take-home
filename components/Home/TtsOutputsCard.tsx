@@ -9,6 +9,8 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
+import TtsJob from './TtsJob';
+import { Separator } from '../ui/separator';
 
 type Props = {};
 
@@ -22,7 +24,10 @@ const TtsOutputsCard = ({}: Props) => {
         </CardDescription>
       </CardHeader>
 
-      <CardContent className="flex flex-col gap-8"></CardContent>
+      <CardContent className="flex flex-col gap-col-8 p-0">
+        <Separator />
+        <TtsJob />
+      </CardContent>
     </Card>
   );
 };

@@ -6,12 +6,12 @@ type Props = {
   className?: string;
 };
 
-const TypographyLead: React.FC<Props> = ({ children, className }) => {
+const TypographySmall: React.FC<Props> = ({ children, className }) => {
   return (
-    <span className={cn('text-xl text-muted-foreground', className)}>
+    <span className={cn('text-sm font-medium leading-none', className)}>
       {children}
     </span>
   );
 };
 
-export default TypographyLead;
+export default TypographySmall;
