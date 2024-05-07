@@ -14,6 +14,9 @@ export default function Home() {
           Play with unique AI voice models, langugaes, and pitch without the
           need for voice actors, microphones, or recordings.
         </TypographyLead>
+        <div>
+          <TtsCreatJobCard />
+        </div>
       </div>
     </div>
   );
