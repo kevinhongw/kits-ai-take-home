@@ -12,12 +12,12 @@ You're going to use the Voice Model API to fetch model information, and the Text
 
 ### Requirements
 
-- The user should be able to input text into a text area
-- The user should be able to select a voice from a dropdown. The voice options should be fetched from the Voice Model API and which models to show is up to you. Feel free to display only the first page of models.
-- When the user clicks the "Convert" button, the text should be converted to speech. You can use the TTS API to do this.
-- The right section of the page should display the converted speech output.
-- The conversion takes some time to process and we should show appropriate loading states. Expect the conversion to take about 10 seconds, but it can take longer.
-- After the conversion is complete, the user should be able to download the speech output as an audio file. Bonus points for making the output playable in the browser.
+- [ ] The user should be able to input text into a text area
+- [ ] The user should be able to select a voice from a dropdown. The voice options should be fetched from the Voice Model API and which models to show is up to you. Feel free to display only the first page of models.
+- [ ] When the user clicks the "Convert" button, the text should be converted to speech. You can use the TTS API to do this.
+- [ ] The right section of the page should display the converted speech output.
+- [ ] The conversion takes some time to process and we should show appropriate loading states. Expect the conversion to take about 10 seconds, but it can take longer.
+- [ ] After the conversion is complete, the user should be able to download the speech output as an audio file. Bonus points for making the output playable in the browser.
 
 We already have a Next.js project set up for you. You can clone this repo and start working on the project. It has the basic structure and styles set up for you. It uses TailwindCSS for styling and has TypeScript support as well. You can use any UI library you're comfortable with (we like Shadcn) or build from scratch.
 
