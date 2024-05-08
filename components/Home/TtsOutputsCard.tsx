@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { InferenceJob } from '@/types';
 import {
   Card,
@@ -22,10 +22,17 @@ const fetchTtsJobs = async () => {
 };
 
 const TtsOutputsCard = () => {
-  const ttsJobs = usePolling<InferenceJob[]>({
+  const { data: ttsJobs, setRun } = usePolling<InferenceJob[]>({
     pollFn: fetchTtsJobs,
     delay: 3000,
   });
+
+  // stop pollling when all jobs are done
+  useEffect(() => {
+    const runningJobs = (ttsJobs || []).some((job) => job.status === 'running');
+
+    setRun(!!runningJobs);
+  }, [ttsJobs, setRun]);
 
   return (
     <Card className="w-full max-w-md">

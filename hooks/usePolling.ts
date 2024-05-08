@@ -7,6 +7,7 @@ export const usePolling = <T>({
   pollFn: Function;
   delay: number;
 }) => {
+  const [run, setRun] = useState<boolean>(true);
   const [data, setData] = useState<T | null>(null);
   const fetchDataIntervalId = useRef<
     ReturnType<typeof setInterval> | undefined
@@ -32,18 +33,20 @@ export const usePolling = <T>({
         fetchDataIntervalId.current = undefined;
       }
 
-      fetchDataIntervalId.current = setInterval(async () => {
-        const response = await pollFn();
+      if (run) {
+        fetchDataIntervalId.current = setInterval(async () => {
+          const response = await pollFn();
 
-        setData(response);
-      }, delay);
+          setData(response);
+        }, delay);
+      }
     };
 
     execute();
 
     // Clear the interval on unmount
     return () => clearInterval(fetchDataIntervalId.current);
-  }, [pollFn, delay]);
+  }, [pollFn, delay, run]);
 
-  return data;
+  return { data, setRun };
 };

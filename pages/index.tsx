@@ -16,7 +16,7 @@ export default function Home({
           Kits AI Text-to-speech
         </TypographyH1>
         <TypographyLead className="max-w-2xl text-center">
-          Play with unique AI voice models, langugaes, and pitch without the
+          Play with unique AI voice models, languages, and pitch without the
           need for voice actors, microphones, or recordings.
         </TypographyLead>
       </div>
