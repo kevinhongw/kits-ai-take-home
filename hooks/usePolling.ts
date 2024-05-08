@@ -12,7 +12,8 @@ export const usePolling = <T>({
     ReturnType<typeof setInterval> | undefined
   >(undefined);
 
-  // fetch on load
+  // fetch on load, not sure if this is the best solution
+  // but just gonna go with it for now.
   useEffect(() => {
     const initialFetch = async () => {
       const response = await pollFn();

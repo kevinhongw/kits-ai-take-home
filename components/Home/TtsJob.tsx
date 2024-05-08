@@ -1,11 +1,11 @@
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
-import TypographySmall from '../ui/TypographySmall';
+import TypographySmall from '@/components/ui/TypographySmall';
 import { InferenceJob, InferenceJobStatus } from '@/types';
 import { cn } from '@/lib/utils';
 import moment from 'moment';
 import AudioPlayer from './AudioPlayer';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 
 type Props = {

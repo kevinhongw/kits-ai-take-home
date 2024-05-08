@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { InferenceJob } from '@/types';
 import {
   Card,
   CardContent,
@@ -8,10 +9,9 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
-import TtsJob from './TtsJob';
-import { Separator } from '../ui/separator';
-import { InferenceJob } from '@/types';
+import { Separator } from '@/components/ui/separator';
 import { usePolling } from '@/hooks/usePolling';
+import TtsJob from './TtsJob';
 
 // TODO: reallocate all api call to same folder
 const fetchTtsJobs = async () => {
